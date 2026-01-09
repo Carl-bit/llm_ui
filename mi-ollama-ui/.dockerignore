@@ -16,4 +16,3 @@ Thumbs.db
 
 # Ignorar archivos de Docker (opcional, pero limpio)
 Dockerfile
-nginx.conf
