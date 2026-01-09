@@ -22,7 +22,7 @@ services:
     container_name: ollama_api_backend
     ports:
       # Asumo que tu API corre en el 8000, ajústalo si es diferente
-      - "8000:8000"
+      - "8001:8000"
     environment:
       # Si tu API necesita saber dónde está Ollama (la IA real)
       - OLLAMA_HOST=http://host.docker.internal:11434
