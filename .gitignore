@@ -1,0 +1,25 @@
+# --- Dependencias (Nunca se suben) ---
+**/node_modules
+**/venv
+**/.venv
+**/__pycache__
+
+# --- Builds y Archivos Compilados ---
+**/dist
+**/build
+*.pyc
+
+# --- Archivos de Sistema y Logs ---
+.DS_Store
+Thumbs.db
+npm-debug.log
+*.log
+
+# --- Variables de Entorno (SEGURIDAD CRÍTICA) ---
+# Nunca subas tus claves o secretos a Git
+.env
+.env.local
+
+# --- IDEs ---
+.vscode/
+.idea/

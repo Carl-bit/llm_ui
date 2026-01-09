@@ -1,0 +1,65 @@
+/* src/App.css */
+.app-container {
+  display: grid;
+  width: 100vw;
+  /* 100% del ancho de la vista */
+  height: 100vh;
+  /* 100% del alto de la vista */
+
+  /* Aquí definimos las 3 columnas: Izquierda | Centro | Derecha */
+  grid-template-columns: 260px 1fr 300px;
+}
+
+/* Solo para ver los bordes por ahora */
+.panel {
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+/* El contenedor que envuelve TODO */
+.app-container {
+  display: flex;
+  /* Activa el modo fila */
+  flex-direction: row;
+  /* Uno al lado del otro */
+  height: 100vh;
+  /* Altura exacta de la ventana */
+  width: 100vw;
+  /* Ancho exacto de la ventana */
+  overflow: hidden;
+  /* Nada se sale de aquí */
+}
+
+/* 1. Panel Izquierdo (Sidebar) */
+/* Asumo que tu sidebar tiene una clase o es un componente, 
+   si no tiene clase, envuélvelo en un div con esta clase */
+.panel.izquierdo,
+.sidebar-container {
+  width: 260px;
+  /* Ancho fijo */
+  flex-shrink: 0;
+  /* PROHIBIDO encogerse */
+  border-right: 1px solid #333;
+  overflow-y: auto;
+}
+
+/* 2. Panel Central (ChatArea) */
+.chat-container {
+  flex: 1;
+  /* MAGIA: Ocupa todo el espacio sobrante */
+  min-width: 0;
+  /* Truco para evitar desbordamientos en flex */
+  height: 100%;
+  /* Altura controlada por el padre */
+}
+
+/* 3. Panel Derecho (Monitor) */
+.panel.derecho {
+  width: 300px;
+  /* Ancho fijo */
+  flex-shrink: 0;
+  /* PROHIBIDO encogerse */
+  border-left: 1px solid #333;
+  height: 100%;
+  overflow-y: auto;
+}

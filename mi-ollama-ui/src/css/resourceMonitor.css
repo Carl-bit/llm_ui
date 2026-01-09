@@ -1,0 +1,43 @@
+/* ResourceMonitor.css */
+.panel.derecho {
+    background-color: #181818;
+    border-left: 1px solid #333;
+    padding: 20px;
+    width: 300px;
+    /* Ancho fijo */
+    font-family: 'Consolas', 'Courier New', monospace;
+    /* Fuente tipo hacker */
+}
+
+.monitor-card {
+    background: #252526;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.metric-item .label {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.metric-item .value {
+    color: #4caf50;
+    /* Verde matrix */
+    font-weight: bold;
+}

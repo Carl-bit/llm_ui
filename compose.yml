@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Servicio 1: Tu Interfaz en React
+  frontend:
+    build:
+      context: ./mi-ollama-ui
+      dockerfile: Dockerfile
+    container_name: ollama_frontend
+    ports:
+      - "80:80" # Accedes en http://localhost
+    depends_on:
+      - backend
+    networks:
+      - ollama-net
+
+  # Servicio 2: Tu API (que ya tienes configurada)
+  backend:
+    build:
+      context: ./ollama-api
+      dockerfile: Dockerfile
+    container_name: ollama_api_backend
+    ports:
+      # Asumo que tu API corre en el 8000, ajústalo si es diferente
+      - "8000:8000"
+    environment:
+      # Si tu API necesita saber dónde está Ollama (la IA real)
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - ollama-net
+
+networks:
+  ollama-net:
+    driver: bridge

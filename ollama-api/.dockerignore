@@ -1,0 +1,17 @@
+# Ignorar entornos virtuales locales
+venv
+.venv
+env
+
+# Ignorar archivos compilados de Python (cache)
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar configuración de git
+.git
+.gitignore
+
+# Ignorar archivos de Docker
+Dockerfile

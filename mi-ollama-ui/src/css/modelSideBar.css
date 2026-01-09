@@ -1,0 +1,67 @@
+/* Eliminar los puntos de la lista ul */
+.model-list {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espacio entre tarjetas */
+}
+
+/* ESTILO DE TARJETA (Igual al Monitor) */
+.model-btn {
+    width: 100%;
+    background-color: #252526;
+    /* Fondo oscuro tarjeta */
+    border: 1px solid #333;
+    /* Borde sutil */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    color: #e0e0e0;
+
+    /* Para alinear texto y tamaño a los extremos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Efecto Hover (Al pasar el mouse) */
+.model-btn:hover {
+    border-color: #666;
+    background-color: #2d2d2d;
+    transform: translateX(5px);
+    /* Pequeño movimiento a la derecha */
+}
+
+/* ESTADO ACTIVO (El modelo seleccionado) */
+.model-btn.active {
+    border-color: #007bff;
+    /* Borde azul brillante */
+    background-color: rgba(0, 123, 255, 0.1);
+    /* Fondo azulado muy suave */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    /* Resplandor */
+}
+
+/* Texto del nombre del modelo */
+.model-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Etiqueta de tamaño (ej: 8.0B) */
+.model-tag {
+    background-color: #1e1e1e;
+    color: #4caf50;
+    /* Verde Matrix igual al monitor */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    border: 1px solid #333;
+}

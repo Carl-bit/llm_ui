@@ -1,0 +1,19 @@
+# Ignorar dependencias (se instalarán dentro del contenedor)
+node_modules
+
+# Ignorar builds locales anteriores
+dist
+build
+
+# Ignorar logs y archivos del sistema
+npm-debug.log
+.DS_Store
+Thumbs.db
+
+# Ignorar configuración de git
+.git
+.gitignore
+
+# Ignorar archivos de Docker (opcional, pero limpio)
+Dockerfile
+nginx.conf
