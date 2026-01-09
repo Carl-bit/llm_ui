@@ -12,7 +12,7 @@ function ModelSideBar() {
         const fetchModels = async () => {
             try {
                 // Hacemos la llamada a TU servidor intermedio (Node.js)
-                const response = await fetch('http://localhost:3001/api/models');
+                const response = await fetch('/api/models');
 
                 const data = await response.json();
 
