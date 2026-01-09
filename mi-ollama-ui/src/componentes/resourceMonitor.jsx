@@ -1,5 +1,5 @@
 import { useChat } from '../context/chatContext';
-import '../css/ResourceMonitor.css'; // Asumo que crearás estilos
+import '../css/resourceMonitor.css'; // Asumo que crearás estilos
 
 function ResourceMonitor() {
     const { lastMetrics, currentModel } = useChat();
